@@ -1,6 +1,7 @@
 """
 data_utils.py — MNIST loading, normalisation, and DataLoader creation.
 """
+from __future__ import annotations
 import random
 from pathlib import Path
 

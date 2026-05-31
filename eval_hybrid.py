@@ -4,6 +4,7 @@ eval_hybrid.py — Step 4b: Compare baseline vs. hybrid accuracy and resource sa
 Prints a table of accuracy, F1, accuracy drop, and hardware cost
 for every experiment.  Saves JSON to outputs/results/eval_{exp}.json.
 """
+from __future__ import annotations
 import argparse
 import json
 

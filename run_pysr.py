@@ -9,6 +9,7 @@ Outputs per class:
   outputs/pysr/{exp}/class_{j}/best_equation.txt
   outputs/pysr/{exp}/class_{j}/run_config.json
 """
+from __future__ import annotations
 import argparse
 import io
 import json

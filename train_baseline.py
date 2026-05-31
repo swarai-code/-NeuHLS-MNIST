@@ -2,6 +2,7 @@
 train_baseline.py — Step 1: Train BaselineMLP on MNIST to convergence.
 Saves best checkpoint to outputs/checkpoints/baseline.pt.
 """
+from __future__ import annotations
 import argparse
 import csv
 import json

@@ -11,6 +11,7 @@ Also writes the full baseline MLP HLS under hls_generated/baseline/.
 Sparse scalar interface:  only variables that actually appear in the expression
 are declared as function parameters → zero dead ports in the synthesised RTL.
 """
+from __future__ import annotations
 import argparse
 import ast
 import json

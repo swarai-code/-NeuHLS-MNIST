@@ -1,6 +1,7 @@
 """
 models.py — BaselineMLP and Hybrid drop-in replacements for MNIST 784→128→64→10.
 """
+from __future__ import annotations
 import copy
 
 import torch

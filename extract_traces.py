@@ -8,6 +8,7 @@ For a 10-class MLP we collect:
 Each CSV has columns x0…xD-1 (hidden activations) and y (raw logit for that class).
 PySR fits one analytic function per CSV.
 """
+from __future__ import annotations
 import argparse
 import json
 

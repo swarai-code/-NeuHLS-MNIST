@@ -8,6 +8,7 @@ Selection policy (mirrors original NeuSym):
 
 Writes outputs/equations/{exp}/equations.json with one entry per output class.
 """
+from __future__ import annotations
 import argparse
 import json
 

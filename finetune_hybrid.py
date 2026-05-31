@@ -8,6 +8,7 @@ keeping the symbolic expressions fixed.
 For Hybrid1L: fc1, fc2 weights are trainable (fc3 → symbolic).
 For Hybrid2L: fc1 weights are trainable  (fc2+fc3 → symbolic).
 """
+from __future__ import annotations
 import argparse
 import copy
 import json
