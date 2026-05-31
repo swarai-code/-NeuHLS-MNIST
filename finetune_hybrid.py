@@ -83,6 +83,8 @@ def finetune_experiment(exp_name: str, epochs: int, lr: float, device, smoke_tes
 
     baseline  = load_baseline(device=device)
     model     = build_hybrid(copy.deepcopy(baseline), layer, equations).to(device)
+    for p in model.parameters():   # unfreeze upstream layers for fine-tuning
+        p.requires_grad_(True)
 
     train_loader, test_loader = get_loaders(smoke_test=smoke_test)
 
