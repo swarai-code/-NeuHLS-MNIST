@@ -6,5 +6,4 @@ set_part {xc7a35tcpg236-1}
 create_clock -period 10 -name default
 config_dataflow -default_channel fifo -fifo_depth 2
 csynth_design
-export_design -rtl verilog -format ip_catalog
 close_project
