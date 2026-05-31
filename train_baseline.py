@@ -55,6 +55,8 @@ def train(args):
     model     = BaselineMLP().to(device)
     criterion = nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
+        optimizer, mode="max", factor=0.5, patience=3, verbose=True)
 
     log_rows            = []
     best_test_acc       = 0.0
@@ -79,6 +81,7 @@ def train(args):
         tr_loss /= tr_total
         tr_acc   = tr_correct / tr_total
         te_loss, te_acc = evaluate(model, test_loader, criterion, device)
+        scheduler.step(te_acc)
 
         log_rows.append(dict(epoch=epoch,
                              train_loss=round(tr_loss, 6), train_acc=round(tr_acc, 6),
